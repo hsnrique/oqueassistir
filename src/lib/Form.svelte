@@ -19,71 +19,68 @@
 	export let loading;
 
 	const categoryTypes = [
-		'Action',
-		'Adventure',
-		'Animation',
-		'Biography',
-		'Comedy',
+		'Ação',
+		'Aventura',
+		'Animação',
+		'Biografia',
+		'Comédia',
 		'Crime',
-		'Documentary',
+		'Documentário',
 		'Drama',
-		'Family',
-		'Fantasy',
+		'Familia',
+		'Fantasia',
 		'Film-Noir',
-		'History',
-		'Horror',
+		'História',
+		'Terror',
 		'Musical',
-		'Mystery',
+		'Mistério',
 		'Romance',
 		'Sci-Fi',
-		'Sport',
-		'Thriller',
-		'War',
-		'Western',
+		'Esporte',
+		'Suspense',
+		'Guerra',
+		'Ocidental',
 		'Art-house',
 		'Black-Comedy',
-		'Chick-flick',
-		'Cult-classic',
-		'Dark-Comedy',
-		'Epic',
-		'Erotic',
+		'Infantil',
+		'Clássico',
+		'Épico',
+		'Erótico',
 		'Experimental',
-		'Fairy-tale',
-		'Film-within-a-film',
-		'Futuristic',
+		'Conto de fada',
+		'Futurista',
 		'Gangster',
-		'Heist',
-		'Historical',
-		'Holiday',
+		'Golpe',
+		'Histórico',
+		'Férias',
 		'Indie',
-		'Juvenile',
+		'Juvenil',
 		'Melodrama',
-		'Monster',
-		'Political',
-		'Psychological',
-		'Road-movie',
-		'Satire',
-		'Science-Fiction',
-		'Slapstick',
-		'Social-issue',
-		'Superhero',
+		'Monstro',
+		'Politico',
+		'Psicológico',
+		'Filme de estrada',
+		'Sátira',
+		'Ficção cientifica',
+		'Questões sociais',
+		'Super-heróis',
 		'Surreal',
-		'Teen',
-		'Vampire',
-		'Zombie'
+		'Adolescente',
+		'Vampiro',
+		'Zumbi'
 	];
 
 	let cinemaTypes = [
-		{ value: 'tv show', title: 'TV Show' },
-		{ value: 'movie', title: 'Movie' },
-		{ value: 'tv show or movie', title: 'No Preference' }
+		{ value: 'series', title: 'Series' },
+		{ value: 'filmes', title: 'Filmes' },
+		{ value: 'series ou filmes', title: 'Sem preferencia' }
 	];
 </script>
 
 <div class="pt-6 md:pt-10 text-slate-200">
 	<div>
 		<div class="mb-8">
-			<div class="mb-4 font-semibold text-lg">What kind of cinema are you searching for?</div>
+			<div class="mb-4 font-semibold text-lg">Que tipo de entretenimento você está procurando?</div>
 			<div class="flex items-center">
 				{#each cinemaTypes as type (type.value)}
 					<button
@@ -91,8 +88,8 @@
 							cinemaType = type.value;
 						}}
 						class={`${
-							cinemaType === type.value ? 'bg-pink-600/40' : ''
-						} text-slate-200 font-bold mr-2 text-sm mt-2 py-2 px-4 rounded-full border border-pink-600`}
+							cinemaType === type.value ? 'bg-purple-600/40' : ''
+						} text-slate-200 font-bold mr-2 text-sm mt-2 py-2 px-4 rounded-full border border-purple-600`}
 					>
 						{type.title}
 					</button>
@@ -101,14 +98,14 @@
 		</div>
 		<div>
 			<div class="mb-4 font-semibold text-lg">
-				Select all categories that you want the show or movie to include.
+				Selecione todas as categorias que você deseja que a série ou filme inclua.
 			</div>
 			<div class="flex items-center flex-wrap">
 				{#each categoryTypes as category}
 					<label
 						class={`${
-							selectedCategories.includes(category) ? 'bg-pink-600/40' : ''
-						} text-slate-200 font-bold mr-2 mt-2 text-sm py-2 px-4 rounded-full border border-pink-600`}
+							selectedCategories.includes(category) ? 'bg-purple-600/40' : ''
+						} text-slate-200 font-bold mr-2 mt-2 text-sm py-2 px-4 rounded-full border border-purple-600`}
 					>
 						<input
 							class="hidden"
@@ -124,25 +121,25 @@
 		</div>
 		<div class="mt-8">
 			<div class="mb-4 font-semibold text-lg">
-				Write any other specifications here. Be as picky as you'd like.
+				Escreva quaisquer outras especificações aqui. Seja tão exigente quanto você quiser.
 			</div>
 			<textarea
 				bind:value={specificDescriptors}
 				class="bg-white/40 border border-white/0 p-2 rounded-md placeholder:text-slate-800 text-slate-900 w-full h-20 font-medium"
-				placeholder="Ex. Must have at least 2 seasons and be on Netflix or Hulu."
+				placeholder="Ex: Deve ter pelo menos 2 temporadas e estar no Netflix ou Star+."
 			/>
 			<button
 				on:click
 				class={`${
 					loading
-						? 'bg-pink-400/50'
-						: 'bg-pink-600 hover:bg-gradient-to-r from-pink-700 via-pink-600 to-pink-700 '
+						? 'bg-purple-400/50'
+						: 'bg-purple-600 hover:bg-gradient-to-r from-purple-700 via-purple-600 to-purple-700 '
 				} mt-4 w-full h-10 text-white font-bold p-3 rounded-full flex items-center justify-center`}
 			>
 				{#if loading}
 					<LoadingIndicator />
 				{:else}
-					<p>Curate My List</p>
+					<p>Criar minha lista</p>
 				{/if}
 			</button>
 		</div>

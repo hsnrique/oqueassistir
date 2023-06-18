@@ -55,7 +55,7 @@
 						</div>
 					</div>
 					<div class="flex items-center">
-						<div class="mr-4 py-1 px-2 rounded-full text-pink-600 border border-pink-600 text-xs">
+						<div class="mr-4 py-1 px-2 rounded-full text-purple-600 border border-purple-600 text-xs">
 							{data.Rated}
 						</div>
 					</div>

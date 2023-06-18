@@ -7,26 +7,18 @@
 >
 	<button on:click class="flex items-center mb-4 md:mb-0 text-white/70">
 		<TvIcon />
-		<div class="text-2xl md:text-xl font-bold ml-2">watchthis.dev</div>
+		<div class="text-2xl md:text-xl font-bold ml-2">O que assistir?</div>
 	</button>
 	<a
-		class="bg-white/20 hover:bg-white/50 shadow text-white hover:text-pink-600 font-medium rounded p-2 text-sm flex items-center"
-		href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FStephDietz%2Fwatch-this&env=VITE_OPENAI_API_KEY&envDescription=Open%20AI%20API%20key&demo-title=watchthis.dev&demo-url=https%3A%2F%2Fwatchthis.dev"
+		class="bg-white/20 hover:bg-white/50 shadow text-white hover:text-purple-600 font-medium rounded p-2 text-sm flex items-center"
+		href="https://github.com/henrymartinsb/oqueassistir"
 	>
-		<span class="button_prefix__e8xDo"
-			><svg height="16" viewBox="0 0 113 100" width="16" xmlns="http://www.w3.org/2000/svg"
-				><defs
-					><linearGradient id="a" x1="196.57%" x2="50%" y1="228.82%" y2="50%"
-						><stop offset="0%" /><stop offset="100%" stop-color="currentColor" /></linearGradient
-					></defs
-				><path
-					d="M350.5 150L407 250H294z"
-					fill="url(#a)"
-					fill-rule="evenodd"
-					transform="translate(-294 -150)"
-				/></svg
-			></span
+		<span class="button_prefix__e8xDo">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+				<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+			</svg>
+		</span
 		>
-		<span class="ml-2">Deploy</span>
+		<span class="ml-2">Repositório</span>
 	</a>
 </div>

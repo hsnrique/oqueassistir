@@ -14,6 +14,12 @@ Then, run the application in the command line and it will be available at http:/
 
 `npm run dev`
 
-# Deploy Instantly on Vercel
+<br>
+<br>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FStephDietz%2Fwatch-this&env=VITE_OPENAI_API_KEY&envDescription=Open%20AI%20API%20key&demo-title=watchthis.dev&demo-url=https%3A%2F%2Fwatchthis.dev)
+## 🌹 Do you like this project?
+
+Did you like? Would you like me to bring more? <br> This is how I know if I'm on the right track and delivering interesting solutions for you.
+<br>
+<br>
+[![Buy me a coffee](/src/lib/bmc-button.svg)](https://bmc.link/henrymartinsb)
