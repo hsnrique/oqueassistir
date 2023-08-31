@@ -15,7 +15,7 @@ Em seguida, execute o aplicativo na linha de comando e ele estará disponível e
 <br>
 <br>
 
-##🌹 Você gosta deste projeto?
+## 🌹 Você gosta deste projeto?
 Você gostou? Gostaria que eu trouxesse mais? <br> É assim que eu sei se estou no caminho certo e entregando soluções interessantes para você.
 <br>
 <br>
