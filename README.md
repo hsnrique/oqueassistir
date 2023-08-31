@@ -4,7 +4,7 @@ Este projeto usa a API OpenAI GPT-3 (especificamente, text-davinci-003) e as fun
 ### Executando localmente
 Depois de clonar o repositório, vá para a OpenAI para criar uma conta e coloque sua chave API em um arquivo chamado `.env`.
 
-### Por exemplo:
+Por exemplo:
 
 `OPENAI_API_KEY=...`
 
