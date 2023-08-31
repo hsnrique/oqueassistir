@@ -1,25 +1,22 @@
-# How it works
+# Como funciona
+Este projeto usa a API OpenAI GPT-3 (especificamente, text-davinci-003) e as funções Vercel Edge com streaming. Ele gera 5 recomendações de cinema com base no formulário e na entrada do usuário, envia-o à API GPT-3 por meio de uma função Vercel Edge e, em seguida, transmite a resposta de volta para o aplicativo.
 
-This project uses the OpenAI GPT-3 API (specifically, text-davinci-003) and Vercel Edge functions with streaming. It generates 5 cinema recommendations based on the form and user input, sends it to the GPT-3 API via a Vercel Edge function, then streams the response back to the application.
+### Executando localmente
+Depois de clonar o repositório, vá para a OpenAI para criar uma conta e coloque sua chave API em um arquivo chamado `.env`.
 
-# Running Locally
-
-After cloning the repo, go to OpenAI to make an account and put your API key in a file called `.env`.
-
-For example:
+### Por exemplo:
 
 `OPENAI_API_KEY=...`
 
-Then, run the application in the command line and it will be available at http://localhost:5173.
+Em seguida, execute o aplicativo na linha de comando e ele estará disponível em http://localhost:5173.
 
 `npm run dev`
 
 <br>
 <br>
 
-## 🌹 Do you like this project?
-
-Did you like? Would you like me to bring more? <br> This is how I know if I'm on the right track and delivering interesting solutions for you.
+##🌹 Você gosta deste projeto?
+Você gostou? Gostaria que eu trouxesse mais? <br> É assim que eu sei se estou no caminho certo e entregando soluções interessantes para você.
 <br>
 <br>
 [![Buy me a coffee](/src/lib/bmc-button.svg)](https://bmc.link/henrymartinsb)
