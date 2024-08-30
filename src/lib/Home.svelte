@@ -12,13 +12,13 @@
 		>
 			Pedir recomendações
 		</button>
-		<a
+		<!-- <a
 			href="https://livepix.gg/henrymartinsb"
 			target="_blank"
 			class="w-full md:w-auto text-center bg-white/20 hover:bg-white/50 mb-4 flex-none rounded-full text-white font-medium py-3 px-6"
 		>
 			Solicite o código fonte
-		</a>
+		</a> -->
 	</div>
 </div>
 
@@ -32,7 +32,7 @@
 	<p>
 		<a  
 			style="flex-direction: row !important; display: flex;"
-			href="https://www.buymeacoffee.com/henrymartinsb"
+			href="https://www.buymeacoffee.com/hsnrique"
 			target="_blank" rel="noreferrer"
 			class="w-full md:w-auto text-center bg-white/20 hover:bg-white/50 mb-4 flex-none rounded-full text-white font-medium py-3 px-6"
 		>

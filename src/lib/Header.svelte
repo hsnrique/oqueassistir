@@ -11,7 +11,7 @@
 	</button>
 	<a
 		class="bg-white/20 hover:bg-white/50 shadow text-white hover:text-purple-600 font-medium rounded p-2 text-sm flex items-center"
-		href="https://github.com/henrymartinsb"
+		href="https://github.com/hsnrique"
 	>
 		<span class="button_prefix__e8xDo">
 			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">

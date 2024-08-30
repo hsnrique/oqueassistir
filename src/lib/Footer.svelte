@@ -6,7 +6,7 @@
 	class="max-w-4xl mx-auto w-full flex md:flex-row flex-col items-center md:justify-between py-8 mt-20 border-t border-white/20"
 >
 	<div class="text-white/70 flex items-center flex-none">
-		Criado por <a class="mx-1 font-bold" href="https://github.com/henrymartinsb/oqueassistir" target="_blank"> Henry</a>
+		Criado por <a class="mx-1 font-bold" href="https://github.com/hsnrique" target="_blank" rel="noreferrer"> Henrique</a>
 		usando
 		<span class="ml-1 font-bold">Open AI </span>.
 	</div>
