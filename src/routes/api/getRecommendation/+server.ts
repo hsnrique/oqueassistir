@@ -5,7 +5,7 @@ const key = OPENAI_API_KEY;
 
 interface OpenAIStreamPayload {
 	model: string;
-	prompt: string;
+	messages: Array<{ role: string; content: string }>;
 	temperature: number;
 	top_p: number;
 	frequency_penalty: number;
@@ -21,7 +21,7 @@ async function OpenAIStream(payload: OpenAIStreamPayload) {
 
 	let counter = 0;
 
-	const res = await fetch('https://api.openai.com/v1/completions', {
+	const res = await fetch('https://api.openai.com/v1/chat/completions', {
 		headers: {
 			'Content-Type': 'application/json',
 			Authorization: `Bearer ${key}`
@@ -35,14 +35,14 @@ async function OpenAIStream(payload: OpenAIStreamPayload) {
 			function onParse(event: any) {
 				if (event.type === 'event') {
 					const data = event.data;
-					// https://beta.openai.com/docs/api-reference/completions/create#completions/create-stream
+					// https://platform.openai.com/docs/api-reference/chat/create#chat/create-stream
 					if (data === '[DONE]') {
 						controller.close();
 						return;
 					}
 					try {
 						const json = JSON.parse(data);
-						const text = json.choices[0].text;
+						const text = json.choices[0].delta?.content || '';
 
 						if (counter < 2 && (text.match(/\n/) || []).length) {
 							// this is a prefix character (i.e., "\n\n"), do nothing
@@ -57,10 +57,7 @@ async function OpenAIStream(payload: OpenAIStreamPayload) {
 				}
 			}
 
-			// stream response (SSE) from OpenAI may be fragmented into multiple chunks
-			// this ensures we properly read chunks and invoke an event for each SSE event stream
 			const parser = createParser(onParse);
-			// https://web.dev/streams/#asynchronous-iteration
 			for await (const chunk of res.body as any) {
 				parser.feed(decoder.decode(chunk));
 			}
@@ -72,8 +69,8 @@ async function OpenAIStream(payload: OpenAIStreamPayload) {
 export async function POST({ request }: { request: any }) {
 	const { searched } = await request.json();
 	const payload = {
-		model: 'text-davinci-003',
-		prompt: searched,
+		model: 'gpt-4o-mini',  // Use 'gpt-4' or 'gpt-3.5-turbo' as needed
+		messages: [{ role: 'user', content: searched }],
 		temperature: 0.7,
 		max_tokens: 2048,
 		top_p: 1.0,
